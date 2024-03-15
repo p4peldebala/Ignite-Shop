@@ -7,6 +7,7 @@ export default async function handler(
 ) {
     
 	const { priceId }  = request.body
+	console.log(process.env.VERCEL_URL)
     if(request.method !== 'POST'){
         return response.status(405).json({error: 'Ação inválida, método não permitido'})
     }
