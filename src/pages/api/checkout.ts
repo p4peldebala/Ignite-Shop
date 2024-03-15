@@ -7,6 +7,7 @@ export default async function handler(
 ) {
     
 	const { priceId }  = request.body
+	console.log(process.env.VERCEL_URL)
     if(request.method !== 'POST'){
         return response.status(405).json({error: 'Ação inválida, método não permitido'})
     }
@@ -15,8 +16,8 @@ export default async function handler(
         return response.status(400).json({error: 'Produto não encontrado'})
     }
 
-    const success_url = `${process.env.NEXT_URL}/sucess?session_id={CHECKOUT_SESSION_ID}`
-    const cancel_url = `${process.env.NEXT_URL}/cancel`
+    const success_url = `${process.env.VERCEL_URL}/sucess?session_id={CHECKOUT_SESSION_ID}`
+    const cancel_url = `${process.env.VERCEL_URL}/cancel`
 
 	const checkoutSession = await stripe.checkout.sessions.create({
 		success_url,
