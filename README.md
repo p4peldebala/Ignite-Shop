@@ -1,6 +1,6 @@
 # 🎽 IgniteShop - Venda de camisas - Aplicação Next 🛍️
 
-Bem-vindo à nossa loja de camisas! Aqui você encontrará uma ampla variedade de camisas para todos os gostos e estilos. 🚀
+Uma loja de camisetas. 🚀
 
 ## ℹ️ Sobre
 
